@@ -40,6 +40,16 @@ Grab a boot.img matching the currently installed software on the device.
 This can be done on a rooted device with extraction of the boot partition
 usually, or through factory image with a bit of luck.
 
+Make a bootimg directory in your cuteboot source area and place the boot.img there.
+Then run:
+
+```
+perl ../build/fixup_boot_img.pl <name of boot.img>
+```
+
+This script produces a boot image called cuteboot.boot.img by performing the
+following steps (which you can do manually if you prefer).
+
 Unpack it with build/split_bootimg.pl and note the name of the ramdisk.gz
 * mkdir -p ramdisk
 * cd ramdisk
